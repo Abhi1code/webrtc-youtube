@@ -1,0 +1,67 @@
+body {
+    background: #eee;
+    padding: 2% 0;
+}
+
+video {
+    background: black;
+    border: 1px solid gray;
+}
+
+#chatDiv {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+}
+
+#localVideo {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+}
+
+#remoteVideo {
+    width: 500px;
+    height: 500px;
+}
+
+#msgDiv {
+    top: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    position: fixed;
+    margin: 20px;
+}
+
+#msgBody {
+    margin: 25px;
+    background-color: #8e9196;
+    width: 250px;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+#leftmsg {
+    background-color: aqua;
+    padding: 5px;
+    border-radius: 10px;
+    float: left;
+    margin: 5px;
+    width: 70%;
+}
+
+#rightmsg {
+    background-color: rgb(6, 243, 26);
+    padding: 5px;
+    border-radius: 10px;
+    float: right;
+    margin: 5px;
+    width: 70%;
+}

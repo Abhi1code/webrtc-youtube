@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+</head>
+
+<body>
+    <div id="loginDiv">
+        <center>
+            <h3 style="margin-top: 100px;">Video Chat</h3>
+        </center>
+        <center>
+            <input type="text" name="name" id="name" placeholder="Enter name" style="width: 30%;padding: 10px;margin: 10px;border-width: 2px;border-radius: 5px" /></br>
+
+            <button type="button" id="joinBtn" style="width: 32%;padding: 10px;margin: 10px;background-color: #262;color: #ffffff;font-size: 15px;border-width: 2px;border-radius: 5px">Join video chat !!</button></br>
+        </center>
+    </div>
+
+    <div id="chatDiv" style="display: none;">
+        <center>
+            <h3 style="margin-bottom: 10px;" id="info"></h3>
+        </center>
+
+        <video id="localVideo" autoplay></video>
+        <video id="remoteVideo" autoplay></video>
+
+        <div>
+            <div>
+                <center>
+                    <button id="audioBtn" style="background-color: #8e9196;">Audio On</button>
+                    <input id="callingName" type="text" placeholder="username to call" />
+                    <button id="callBtn" style="background-color: #00ff00;">Call</button>
+                    <button id="hangupBtn" style="display: none; background-color: #ff0000;">Hang Up</button>
+                    <button id="videoBtn" style="background-color: #8e9196;">Video On</button>
+                </center>
+            </div>
+        </div>
+
+        <div id="msgDiv">
+            <div id="msgBody">
+
+            </div>
+            <div style="bottom: 0; display: flex; position: fixed; margin: 15px;">
+                <textarea id="inputMsg"></textarea>
+                <button id="sendBtn" style="display: none; background-color: #215fc9; margin: 10px;">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDkqDQs2-GVlY2tonwcXWQwF53WCz-raIk",
+            authDomain: "webrtc-tutorial-471cd.firebaseapp.com",
+            projectId: "webrtc-tutorial-471cd",
+            storageBucket: "webrtc-tutorial-471cd.appspot.com",
+            messagingSenderId: "88513477002",
+            appId: "1:88513477002:web:086a57db4bc47954013073",
+            measurementId: "G-QTHTZJLQS8"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
